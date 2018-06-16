@@ -1,3 +1,43 @@
 page-contact {
+    .scroll-content{
+        padding: 0px!important;
+    }
 
+    .header{
+        .toolbar-background{
+            background-color: map-get($colors, primary)!important;
+        }
+
+        .toolbar-content{
+            .toolbar-title.toolbar-title-md{
+                color: #fff!important;
+            }
+        }
+    }
+
+    .painel{
+        padding: 0px;
+        
+        .table-header{
+            background-color: map-get($colors,secondary);
+            color: #fff;
+            padding: 0px;
+            align-items: center;
+        }
+        .col{
+            text-align: center;
+        }
+        .col-serv{
+            text-align: center;
+            font-size: 12px;
+        }
+        .col-status{
+            text-align: center;
+            font-size: 12px;            
+        }
+        .items{
+            color: map-get($colors, default-text);
+            border-bottom: 1px solid map-get($colors, light);
+        }
+    }
 }
