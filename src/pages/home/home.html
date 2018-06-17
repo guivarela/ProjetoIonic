@@ -5,13 +5,24 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div *ngIf="!senha">
+    <ion-label>Escolha o Servico</ion-label>
+    <ion-select [(ngModel)]="servico">
+      <ion-option *ngFor="let servico of servicos" value="{{servico.id}}">{{servico.nomeServico}}</ion-option>
+    </ion-select>
+    <button ion-button color="blue" (click)="criarSenha(servico)">Listar</button>
+  </div>
+
+  <div *ngIf="senha" class="">
+    <h2>Senha: {{ senha.senha }}</h2>
+    <label for="servico"><strong>Servico:</strong> </label>
+    <p>{{ senha.servico.nomeServico }}</p>
+    <label for="subservico"><strong>Subservico:</strong> </label>
+    <p>{{ senha.subservico.nomeSubservico }}</p>
+    
+    <label for="status"><strong>Status:</strong> </label>
+    <p>{{ senha.statusSenha }}</p>
+    <label for="horaGerada"><strong>Hora Gerada:</strong> </label>
+    <p>{{ senha.horaGerada }}</p>
+  </div>
 </ion-content>
