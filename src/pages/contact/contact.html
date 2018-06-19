@@ -28,19 +28,21 @@
 					<p>Hora<br>Gerada</p>
 				</ion-col>
 			</ion-row >
-			<ion-row class="items" align-items-center *ngFor="let item of items">
-				<ion-col col-2>							
-					<p>{{ item.senha }}</p>
-				</ion-col>
-				<ion-col col-4>							
-					<p class="col-serv">{{ item.categoria }}</p>
-				</ion-col>
-				<ion-col col-3>							
-					<p class="col-status">{{ item.statusSenha}}</p>
-				</ion-col>
-				<ion-col col-3>							
-					<p>{{ item.horaGerada }}</p>
-				</ion-col>
-			</ion-row>
+			<div class="table-content">
+				<ion-row class="items" align-items-center *ngFor="let item of items">
+					<ion-col col-2>							
+						<p>{{ item.senha }}</p>
+					</ion-col>
+					<ion-col col-4>							
+						<p class="col-serv">{{ item.categoria }}</p>
+					</ion-col>
+					<ion-col col-3>							
+						<p class="col-status">{{ item.statusSenha}}</p>
+					</ion-col>
+					<ion-col col-3>							
+						<p>{{ item.horaGerada }}</p>
+					</ion-col>
+				</ion-row>
+			</div>
 	</ion-grid>
 </ion-content>

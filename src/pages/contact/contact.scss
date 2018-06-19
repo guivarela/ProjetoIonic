@@ -7,6 +7,8 @@ page-contact {
         padding: 0px;
         
         .table-header{
+            position: fixed;
+            width: 100%;
             background-color: map-get($colors,secondary);
             color: #fff;
             padding: 0px;
@@ -27,5 +29,8 @@ page-contact {
             color: map-get($colors, default-text);
             border-bottom: 1px solid map-get($colors, light);
         }
+    }
+    .table-content{
+        margin-top: 75px;
     }
 }
