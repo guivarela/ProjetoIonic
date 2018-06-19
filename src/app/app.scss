@@ -15,7 +15,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
+h1{
+    color: map-get($colors, primary)!important;
+    margin-bottom: 5px;
+}
 
 .header{
     .toolbar-background{
@@ -23,8 +26,13 @@
     }
 
     .toolbar-content{
-        .toolbar-title.toolbar-title-md{
+        .toolbar-title{
             color: #fff!important;
         }
     }
+}
+div.content, .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }

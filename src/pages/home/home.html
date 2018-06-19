@@ -1,20 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title *ngIf="!senha">Nova Senha</ion-title>
-    <ion-title *ngIf="senha">Sua Senha</ion-title>
+    <ion-title *ngIf="!senha"><ion-icon name="key"></ion-icon>&nbsp; Nova Senha</ion-title>
+    <ion-title *ngIf="senha"><ion-icon name="key"></ion-icon>&nbsp; Sua Senha</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="!senha">
-    <ion-label>Escolha o Servico</ion-label>
-    <ion-select [(ngModel)]="servico" placeholder="Servico...">
+  <div class="content" *ngIf="!senha">
+    <ion-label><h1>Serviço:</h1></ion-label>
+    <ion-select [(ngModel)]="servico" placeholder="Escolha o servico...">
       <ion-option *ngFor="let servico of servicos" value="{{servico.id}}">{{servico.nomeServico}}</ion-option>
     </ion-select>
-    <button *ngIf="servico" ion-button color="blue" (click)="criarSenha(servico)">Listar</button>
+    <button  ion-button color="blue" (click)="criarSenha(servico)" ><ion-icon name="add-circle"></ion-icon>&nbsp; Criar Senha</button>
   </div>
 
-  <div *ngIf="senha" class="">
+  <div *ngIf="senha" class="content">
     <h2>Senha: {{ senha.senha }}</h2>
     <label for="servico"><strong>Servico:</strong> </label>
     <p>{{ senha.servico.nomeServico }}</p>

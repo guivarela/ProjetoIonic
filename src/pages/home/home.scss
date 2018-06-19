@@ -3,4 +3,8 @@ page-home {
         position: absolute;
         opacity: 0;
     }
+    ion-select.select{
+        width: 100%;
+        max-width: 100%;
+    }
 }
