@@ -9,6 +9,7 @@ page-contact {
         .table-header{
             position: fixed;
             width: 100%;
+            z-index: 999;
             background-color: map-get($colors,secondary);
             color: #fff;
             padding: 0px;

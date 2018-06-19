@@ -25,6 +25,9 @@ export class SenhasProvider {
   getServicos(){
     return this.http.get(this.baseApiPath+'servicos');
   }
+  getPrevisao(){
+    return this.http.get(this.baseApiPath+'previsaoInicio');
+  }
   setSenha(data:any){
     var myJsonString = JSON.stringify(data);
     console.log(myJsonString);

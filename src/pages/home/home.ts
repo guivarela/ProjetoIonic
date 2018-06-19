@@ -9,6 +9,7 @@ import { Servico } from '../../model/Servico';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  public previsoes: any;
   public servicos = Array<Servico>();;
   public senhas = Array<Senha>();;
   public senhasPorServico = Array<Senha>();;
